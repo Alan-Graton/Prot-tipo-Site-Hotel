@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel</title>
+  </head>
+  <body bgcolor="#5f08a1">
+    <!--- Site será em modo 'Formulário', já que temos que validar o envio de dados --->
+    <form>
+      <font color="#e1baff">
+        <h1>Hotel PIMheiros</h1>
+      </font>
+      <fieldset>
+        <font color="#05ed3b">
+          <h3>Login</h3>
+        </font>
+        <input placeholder="Usuário" type="text" required="required" />
+        <input placeholder="Senha" type="password" required="required" />
+        <button>Entrar</button>
+      </fieldset>
+      <p></p>
+      <!-- <fieldset></fieldset>: Agrupamento de campos
+       Uma boa prática seria fazer um <fieldset></fieldset> pra cada 'tipo' de dado. Por exemplo: Dados Pessoais, Endereço, Estadia no Hotel-->
+      <fieldset>
+        <font color="#05ed3b">
+          <h3>Dados Pessoais</h3>
+        </font>
+        <!-- 'placeholder': Seria um texto 'fantasma' no campo, indicando a entrada de um dados específico -->
+        <!-- 'required="required"': Indica que o campo é obrigatório. Só funciona se estiver dentro de um <form></form> -->
+        <input placeholder="Nome" type="text" required="required" /> *<br />
+        <input placeholder="CPF" type="text" required="required" /> *<br />
+        <!-- Tipo de entrada é um Número de Telefone -->
+        <input placeholder="Telefone" type="phone" required="required" /> <br />
+        <input placeholder="Celular" type="text" required="required" /> <br />
+        <!-- Tipo de entrada é uma Data -->
+        <input class="nascimento" type="date" required="required" />
+        <label for="nascimento">Data de Nascimento</label>
+        <br />
+        <input placeholder="E-mail" type="email" required="required" /> *<br />
+      </fieldset>
+      <!-- Coloquei um parágrafo em branco pra dar um espaçamento entre os 'fieldset' já que a professora falou pra não usar o CSS-->
+      <p></p>
+      <fieldset>
+        <font color="#05ed3b">
+          <h3>Endereço</h3>
+        </font>
+        <select name="Estados" id="">
+          <option value="SP">São Paulo</option>
+          <option value="SP">Bahia</option>
+        </select>
+        <select name="Cidades" id="">
+          <option value="sp">São Paulo</option>
+          <option value="sp">Salvador</option>
+        </select>
+        <input placeholder="Bairro" type="text" required="required" /> <br />
+        <font color="#91f505">
+          <input name="webmaster" type="radio" /> Casa <br />
+          <input name="webmaster" type="radio" /> Apartamento <br />
+        </font>
+        <input placeholder="Número" type="number" required="required" />
+        <input placeholder="Complemento" type="text" required="required" />
+      </fieldset>
+      <p></p>
+      <fieldset>
+        <font color="#05ed3b">
+          <h3>Dados para Estadia</h3>
+        </font>
+        <font color="#91f505">
+          <label>Check-In</label> <input type="date" />
+          <label>CheckOut</label> <input type="date" /> <br />
+          <input placeholder="Quantidade de pessoas" type="number" min="0" />
+          <br />
+          <input type="checkbox" /> Crianças
+          <input placeholder="Quantidade de crianças" type="number" min="0" /> <br>
+          <label>Tipos de Quarto</label>
+          <select name="Quartos">
+            <option value="std">Standard</option>
+            <option value="mst">Master</option>
+            <option value="dlx">Deluxe</option>
+          </select>
+          <br />
+          <input
+            placeholder="Número do Quarto"
+            type="number"
+            min="1"
+            max="150"
+          />
+          <br />
+        </font>
+      </fieldset>
+      <!-- Submit: Enviar formulário. O envio do formulário só é possível caso todos os campos marcados
+            como "required" estejam preenchidos -->
+      <input type="submit" />
+      <!-- Limpar campos preenchidos do formulário -->
+      <input type="reset" />
+    </form>
+  </body>
+</html>
